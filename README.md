@@ -21,7 +21,7 @@ python -m pip install fonttools potracer
 ### 1. 出样张
 
 ```
-python tools\make_template.py --out D:\handwriting-font\template
+python tools\make_template.py --out template
 ```
 产出 `template\S1.html`、`S1.pdf`、`S1_preview.png`、`manifest.json`。
 
@@ -36,7 +36,7 @@ python tools\make_template.py --out D:\handwriting-font\template
 ```
 python tools\make_charset_v2.py
 python tools\make_template.py --out template-v2 --chars-file template-v2-chars.txt --style mofont
-python toolsender_sheet.py template-v2\S1.html
+python tools\render_sheet.py template-v2\S1.html
 ```
 产出 `template-v2\S1.pdf`（单页 A4，实测 210.2×297.3mm）＋ `S1_preview.png` ＋ `manifest.json`。
 
@@ -49,7 +49,7 @@ python toolsender_sheet.py template-v2\S1.html
 - **红色不只是好看**：`#e23b32` 在灰阶里是 108，比 v1 的灰线更暗；
   但在**红色通道**里接近白。`manifest.json` 带 `grid_color: "red"`，
   `build_font.py` 看到就改读红色通道（`to_ink()`），格线因此完全不算墨。
-  实测：格线被当成墨的像素 **红色通道 0 / 灰阶 6400**（`test	est_red_grid.py`）。
+  实测：格线被当成墨的像素 **红色通道 0 / 灰阶 6400**（`test\test_red_grid.py`）。
   ⚠️ 旧的 v1 sheet 没有这个栏位，照旧走灰阶，行为不变。
 
 ⚠️ 刻意写出格没关系，但**别整格涂满**：`strip_frame` 会把贴着裁切框的直线段当成印刷格线擦掉，
@@ -79,7 +79,7 @@ python toolsender_sheet.py template-v2\S1.html
 **手动版**：
 
 ```
-python tools\build_font.py --manifest D:\handwriting-font\template\manifest.json --sheet S1=D:\handwriting-font\scans\S1.jpg --out D:\handwriting-font\build\LinHand.ttf --family "Lin Hand"
+python tools\build_font.py --manifest template\manifest.json --sheet S1=scans\S1.jpg --out build\LinHand.ttf --family "Lin Hand"
 ```
 多张就多加几个 `--sheet S2=... --sheet S3=...`。
 
@@ -114,7 +114,7 @@ python tools\build_font.py --manifest D:\handwriting-font\template\manifest.json
 | proof 图上「国 回 面」的中空被填实 | 加 `--reverse-contours` |
 | 报 `FAIL … strokes thinner than` 但 proof 图其实好看（用了极细笔） | `--min-stroke 0.008`。**先看 proof 图再调**，别反射性调 |
 | 字上带黑框／贴边横竖线（印刷格线漏进来） | 默认已自动清（看 `framed` 那行）。要关掉用 `--keep-frame` |
-| 想看每一格切出来长什么样 | 加 `--debug-dir D:\handwriting-font\test\debug` |
+| 想看每一格切出来长什么样 | 加 `--debug-dir test\debug` |
 
 `--reverse-contours` 目前实测不需要（potracer 的极性已在 `trace_to_glyph` 里处理，
 且实测「国 回 面 有 目」中空正确），留作逃生口，已跑过确认不崩。
@@ -130,7 +130,7 @@ python tools\build_font.py --manifest D:\handwriting-font\template\manifest.json
 
 换字数：
 ```
-python tools\make_template.py --out D:\handwriting-font\template-1000 --chars-file chars.txt --count 1000
+python tools\make_template.py --out template-1000 --chars-file chars.txt --count 1000
 ```
 `chars.txt` = UTF-8 纯文字档，要的字按**频率高→低**排进去（脚本自动去重、按顺序取前 N）。
 每张 120 格，1000 字 = 9 张（最后一张 40 格）。
