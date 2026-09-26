@@ -1,0 +1,147 @@
+<meta charset="utf-8">
+<title>S2</title>
+<style>
+  @page { size: A4; margin: 0; }
+  /* overflow + a hair under the page height: Chrome spills a second, blank
+     page if the body reaches exactly 297mm */
+  html, body { margin: 0; padding: 0; overflow: hidden; }
+  body { width: 210.0mm; height: 296.6mm; position: relative;
+          font-family: "Microsoft YaHei","Noto Sans CJK SC",sans-serif; }
+  .mark { position: absolute; width: 8.0mm; height: 8.0mm;
+           box-sizing: border-box; border: 4.0mm solid #000; }
+  .cell { position: absolute; width: 17.8mm; height: 17.8mm;
+           box-sizing: border-box; border: 0.3mm solid #e23b32;
+           overflow: hidden; }
+  .cell i { position: absolute; display: block; }
+  .h { left: 0; top: 50%; width: 100%; border-top: 0.2mm dashed #f2a9a4; }
+  .v { top: 0; left: 50%; height: 100%; border-left: 0.2mm dashed #f2a9a4; }
+  /* 米字格 diagonals: a full-width rule through the middle, rotated about its
+     own centre and stretched to the diagonal. The cell clips the ends. */
+  .d1, .d2 { left: 0; top: 50%; width: 100%;
+              border-top: 0.2mm dashed #f2a9a4;
+              transform-origin: 50% 50%; }
+  .d1 { transform: rotate(45deg) scaleX(1.4143); }
+  .d2 { transform: rotate(-45deg) scaleX(1.4143); }
+  .lab { position: absolute; width: 17.8mm; height: 4.4mm;
+          color: #e23b32; font-size: 3.1mm; line-height: 4.4mm;
+          text-align: center; }
+  .hdr { position: absolute; left: 16.0mm; top: 20mm;
+          width: 178.0mm; color: #666; font-size: 3.2mm;
+          display: flex; justify-content: space-between; }
+</style>
+<div class="hdr"><span>S2 &nbsp; (2/9)</span>
+<span>同一支笔（跟 LinHand v1 那支）；黑笔；别涂满格</span></div>
+<div class="mark" style="left:12.00mm;top:12.00mm"></div>
+<div class="mark" style="left:190.00mm;top:12.00mm"></div>
+<div class="mark" style="left:190.00mm;top:277.00mm"></div>
+<div class="mark" style="left:12.00mm;top:277.00mm"></div>
+<div class="lab" style="left:16.00mm;top:27.60mm">位</div><div class="cell" style="left:16.00mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:27.60mm">向</div><div class="cell" style="left:33.80mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:27.60mm">军</div><div class="cell" style="left:51.60mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:27.60mm">才</div><div class="cell" style="left:69.40mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:27.60mm">外</div><div class="cell" style="left:87.20mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:27.60mm">接</div><div class="cell" style="left:105.00mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:27.60mm">颜</div><div class="cell" style="left:122.80mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:27.60mm">由</div><div class="cell" style="left:140.60mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:27.60mm">致</div><div class="cell" style="left:158.40mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:27.60mm">关</div><div class="cell" style="left:176.20mm;top:32.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:49.80mm">加</div><div class="cell" style="left:16.00mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:49.80mm">创</div><div class="cell" style="left:33.80mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:49.80mm">题</div><div class="cell" style="left:51.60mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:49.80mm">立</div><div class="cell" style="left:69.40mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:49.80mm">至</div><div class="cell" style="left:87.20mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:49.80mm">电</div><div class="cell" style="left:105.00mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:49.80mm">手</div><div class="cell" style="left:122.80mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:49.80mm">你</div><div class="cell" style="left:140.60mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:49.80mm">应</div><div class="cell" style="left:158.40mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:49.80mm">亚</div><div class="cell" style="left:176.20mm;top:54.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:72.00mm">热</div><div class="cell" style="left:16.00mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:72.00mm">谢</div><div class="cell" style="left:33.80mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:72.00mm">相</div><div class="cell" style="left:51.60mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:72.00mm">讲</div><div class="cell" style="left:69.40mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:72.00mm">交</div><div class="cell" style="left:87.20mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:72.00mm">果</div><div class="cell" style="left:105.00mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:72.00mm">历</div><div class="cell" style="left:122.80mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:72.00mm">何</div><div class="cell" style="left:140.60mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:72.00mm">望</div><div class="cell" style="left:158.40mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:72.00mm">光</div><div class="cell" style="left:176.20mm;top:76.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:94.20mm">舞</div><div class="cell" style="left:16.00mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:94.20mm">知</div><div class="cell" style="left:33.80mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:94.20mm">目</div><div class="cell" style="left:51.60mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:94.20mm">流</div><div class="cell" style="left:69.40mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:94.20mm">冰</div><div class="cell" style="left:87.20mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:94.20mm">特</div><div class="cell" style="left:105.00mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:94.20mm">等</div><div class="cell" style="left:122.80mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:94.20mm">选</div><div class="cell" style="left:140.60mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:94.20mm">经</div><div class="cell" style="left:158.40mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:94.20mm">陈</div><div class="cell" style="left:176.20mm;top:98.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:116.40mm">统</div><div class="cell" style="left:16.00mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:116.40mm">春</div><div class="cell" style="left:33.80mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:116.40mm">其</div><div class="cell" style="left:51.60mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:116.40mm">受</div><div class="cell" style="left:69.40mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:116.40mm">强</div><div class="cell" style="left:87.20mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:116.40mm">品</div><div class="cell" style="left:105.00mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:116.40mm">友</div><div class="cell" style="left:122.80mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:116.40mm">通</div><div class="cell" style="left:140.60mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:116.40mm">绩</div><div class="cell" style="left:158.40mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:116.40mm">思</div><div class="cell" style="left:176.20mm;top:120.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:138.60mm">球</div><div class="cell" style="left:16.00mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:138.60mm">备</div><div class="cell" style="left:33.80mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:138.60mm">放</div><div class="cell" style="left:51.60mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:138.60mm">书</div><div class="cell" style="left:69.40mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:138.60mm">设</div><div class="cell" style="left:87.20mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:138.60mm">数</div><div class="cell" style="left:105.00mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:138.60mm">计</div><div class="cell" style="left:122.80mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:138.60mm">定</div><div class="cell" style="left:140.60mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:138.60mm">举</div><div class="cell" style="left:158.40mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:138.60mm">信</div><div class="cell" style="left:176.20mm;top:143.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:160.80mm">今</div><div class="cell" style="left:16.00mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:160.80mm">台</div><div class="cell" style="left:33.80mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:160.80mm">届</div><div class="cell" style="left:51.60mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:160.80mm">优</div><div class="cell" style="left:69.40mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:160.80mm">识</div><div class="cell" style="left:87.20mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:160.80mm">袖</div><div class="cell" style="left:105.00mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:160.80mm">格</div><div class="cell" style="left:122.80mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:160.80mm">麗</div><div class="cell" style="left:140.60mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:160.80mm">满</div><div class="cell" style="left:158.40mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:160.80mm">鼓</div><div class="cell" style="left:176.20mm;top:165.20mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:183.00mm">神</div><div class="cell" style="left:16.00mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:183.00mm">务</div><div class="cell" style="left:33.80mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:183.00mm">结</div><div class="cell" style="left:51.60mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:183.00mm">训</div><div class="cell" style="left:69.40mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:183.00mm">带</div><div class="cell" style="left:87.20mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:183.00mm">每</div><div class="cell" style="left:105.00mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:183.00mm">解</div><div class="cell" style="left:122.80mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:183.00mm">别</div><div class="cell" style="left:140.60mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:183.00mm">取</div><div class="cell" style="left:158.40mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:183.00mm">试</div><div class="cell" style="left:176.20mm;top:187.40mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:205.20mm">元</div><div class="cell" style="left:16.00mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:205.20mm">界</div><div class="cell" style="left:33.80mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:205.20mm">明</div><div class="cell" style="left:51.60mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:205.20mm">影</div><div class="cell" style="left:69.40mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:205.20mm">佳</div><div class="cell" style="left:87.20mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:205.20mm">修</div><div class="cell" style="left:105.00mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:205.20mm">见</div><div class="cell" style="left:122.80mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:205.20mm">义</div><div class="cell" style="left:140.60mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:205.20mm">练</div><div class="cell" style="left:158.40mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:205.20mm">十</div><div class="cell" style="left:176.20mm;top:209.60mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:227.40mm">席</div><div class="cell" style="left:16.00mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:227.40mm">性</div><div class="cell" style="left:33.80mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:227.40mm">风</div><div class="cell" style="left:51.60mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:227.40mm">系</div><div class="cell" style="left:69.40mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:227.40mm">西</div><div class="cell" style="left:87.20mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:227.40mm">引</div><div class="cell" style="left:105.00mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:227.40mm">迎</div><div class="cell" style="left:122.80mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:227.40mm">四</div><div class="cell" style="left:140.60mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:227.40mm">内</div><div class="cell" style="left:158.40mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:227.40mm">六</div><div class="cell" style="left:176.20mm;top:231.80mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:16.00mm;top:249.60mm">英</div><div class="cell" style="left:16.00mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:33.80mm;top:249.60mm">达</div><div class="cell" style="left:33.80mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:51.60mm;top:249.60mm">处</div><div class="cell" style="left:51.60mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:69.40mm;top:249.60mm">公</div><div class="cell" style="left:69.40mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:87.20mm;top:249.60mm">登</div><div class="cell" style="left:87.20mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:105.00mm;top:249.60mm">则</div><div class="cell" style="left:105.00mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:122.80mm;top:249.60mm">冠</div><div class="cell" style="left:122.80mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:140.60mm;top:249.60mm">色</div><div class="cell" style="left:140.60mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:158.40mm;top:249.60mm">资</div><div class="cell" style="left:158.40mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>
+<div class="lab" style="left:176.20mm;top:249.60mm">金</div><div class="cell" style="left:176.20mm;top:254.00mm"><i class="h"></i><i class="v"></i><i class="d1"></i><i class="d2"></i></div>

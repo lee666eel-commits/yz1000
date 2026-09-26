@@ -1,0 +1,16 @@
+{
+  "id": "lucaslimzzce/yzqj-fontdiffuser-oneshot",
+  "title": "yzqj-fontdiffuser-oneshot",
+  "code_file": "run.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": ["lucaslimzzce/fontdiffuser-package"],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
