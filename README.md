@@ -90,6 +90,16 @@ python tools\build_font.py --manifest template\manifest.json --sheet S1=scans\S1
 
 **装字型**：右键 `.ttf` → 安装。
 
+## 示例产出（真人手写字体范例）
+
+`examples/0000LiuJiaRui/` 是刘嘉瑞本人手写、跑通这条管道后的真实产出——`.ttf` 字体本体 +
+`_proof.png` 校对图，已取得他本人同意公开作为开源范例。这不是模板/占位，是真实跑过验收三
+道（cmap 集合相等／glyphs 实测计数／hollow 守卫）的成品，可以直接装字型看效果，也可以对照
+proof 图核对每个字对不对得上。
+
+其余参与者（0005MissHo／0010Phoon）的真迹字体不在此仓库公开范围内，见
+`PRE-PUBLISH-CHECKLIST.md` 排除清单——只有明确同意公开的那一份才会出现在 `examples/` 下。
+
 ## 验收怎么算过
 
 脚本自己跑三道，**报告里全印出来，任何一道不过就 exit 1**：
