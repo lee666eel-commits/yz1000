@@ -15,7 +15,8 @@ quote? where does a descender go? So this sheet answers those ON the paper:
     reads as paper to build_font.py (ink threshold 150), not only the red channel of a colour print.
 Half-width ? ! ; : ( ) ' " are NOT written separately: merge_latin.py derives them from the
 full-width glyphs, which in handwriting are the same shapes (fewer cells, no "which one?" question).
-Grid geometry is template-merged's, so build_font.py slices it unchanged.
+Cell positions/pitch are template-merged's (cell size 16.8 not 17.8, see CELL); build_font.py reads the
+manifest, so it slices either version.
 """
 import argparse
 import json
@@ -28,6 +29,11 @@ from make_template_merged import (CELL, CELL_INSET, COLS, GRID_RED, CROSS_RED, G
                                   ROWS, cell_xy, data_uri, row_cols)
 
 GUIDE = "#f6cfcb"   # light enough to be paper in a grey print, see docstring
+# 2026-10-20: the 3.1mm red YaHei label was too small to read reliably -- writers copied the wrong character
+# (found when finished fonts were checked glyph by glyph). Labels are now 5mm black 楷体; to make room the cell
+# shrinks 17.8 -> 16.8mm while the pitch (and so cell positions and per-page capacity) stays the same.
+CELL = 16.8
+LAB_H = PITCH - CELL - 0.2   # label band above each cell, 0.2mm clear of the row above
 LATIN = [chr(c) for c in range(0x41, 0x5B)] + [chr(c) for c in range(0x61, 0x7B)] + list("0123456789")
 # (char, label); the faint in-cell example shows WHERE it goes, see example_svg
 HALF = [(".", "英文句点"), (",", "英文逗号"), ("-", "连字号"),
@@ -100,9 +106,9 @@ CSS = f"""
   .gx {{ border-top: 0.2mm dashed {GUIDE}; }}
   .gb {{ border-top: 0.35mm solid {GUIDE}; }}
   .ex {{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; }}
-  .lab {{ position: absolute; width: {CELL}mm; height: 4.4mm; color: {GRID_RED}; font-size: 3.1mm;
-          line-height: 4.4mm; text-align: center; white-space: nowrap; }}
-  .lab.small {{ font-size: 2.5mm; }}
+  .lab {{ position: absolute; width: {CELL}mm; height: {LAB_H:.1f}mm; color: #111; font-size: 5mm;
+          font-family: "KaiTi","STKaiti","楷体",serif; line-height: {LAB_H:.1f}mm; text-align: center; white-space: nowrap; }}
+  .lab.small {{ font-size: 3.2mm; }}
   .hdr {{ position: absolute; left: 22mm; top: 18.4mm; width: 166mm; color: #555;  /* clear of the corner marks:
           text touching a mark merges with it and find_marks() falls back to the red logo tile (measured 10-14) */
           font-size: 3.1mm; line-height: 4.2mm; }}
@@ -155,7 +161,7 @@ def main():
     body, cells = [], []
     for r, c, ch in placed:
         x, y = cell_xy(r, c)
-        body.append(f'<div class="lab" style="left:{x:.2f}mm;top:{y - 4.4:.2f}mm">{ch}</div>' + cell_div(x, y, "hanzi"))
+        body.append(f'<div class="lab" style="left:{x:.2f}mm;top:{y - LAB_H - 0.1:.2f}mm">{ch}</div>' + cell_div(x, y, "hanzi"))
         cells.append(cell_rec(r, c, ch))
     hdr1 = ("<b>黑色签字笔，照你平常写字的样子写</b>，不必写满格；写错了在格子旁边重写一个即可，别涂黑。<br>"
             "第一个字「永」包含了八种基本笔画（永字八法），请认真写。")
@@ -171,7 +177,7 @@ def main():
         latin = ch in LATIN
         kind = "latin" if latin else ("half" if ord(ch) < 0x80 else "punct")
         lab = label if label == ch else f"{label} {ch}"
-        body.append(f'<div class="lab{"" if latin else " small"}" style="left:{x:.2f}mm;top:{y - 4.4:.2f}mm">{lab}</div>')
+        body.append(f'<div class="lab{"" if latin else " small"}" style="left:{x:.2f}mm;top:{y - LAB_H - 0.1:.2f}mm">{lab}</div>')
         body.append(cell_div(x, y, kind, "g" if ch == "g" else (None if latin else ch)))
         cells.append(cell_rec(r, c, ch))
     free_row = last + 1
